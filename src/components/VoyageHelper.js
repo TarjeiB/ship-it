@@ -1,6 +1,5 @@
 import React from "react";
 import { PortChecklists } from "./PortChecklists";
-import { useCargo } from "../hooks/useCargo";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
@@ -8,8 +7,7 @@ import StepContent from "@material-ui/core/StepContent";
 import "styled-components/macro";
 import { Paper } from "@material-ui/core";
 
-export const VoyageHelper = ({ data }) => {
-  const [cargos, ports] = useCargo(data);
+export const VoyageHelper = ({ cargos, ports }) => {
   const [activeStep, setActiveStep] = React.useState(0);
   if (cargos.length === 0) return <p>No cargo found</p>;
 
