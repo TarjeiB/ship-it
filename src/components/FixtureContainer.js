@@ -1,5 +1,5 @@
 import React from "react";
-import { Cargo } from "./Cargo";
+import { VoyageHelper } from "./VoyageHelper";
 import { useFixtures } from "../hooks/useFixtures";
 import { FixtureDetails } from "./FixtureDetails";
 
@@ -10,7 +10,7 @@ export const FixtureContainer = () => {
   return (
     <>
       <FixtureDetails data={fixtures} />
-      <Cargo data={fixtures} />
+      <VoyageHelper data={fixtures} />
     </>
   );
 };

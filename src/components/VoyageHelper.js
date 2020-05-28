@@ -7,7 +7,8 @@ import StepLabel from "@material-ui/core/StepLabel";
 import StepContent from "@material-ui/core/StepContent";
 import "styled-components/macro";
 import { Paper } from "@material-ui/core";
-export const Cargo = ({ data }) => {
+
+export const VoyageHelper = ({ data }) => {
   const [cargos, ports] = useCargo(data);
   const [activeStep, setActiveStep] = React.useState(0);
   if (cargos.length === 0) return <p>No cargo found</p>;
