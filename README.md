@@ -2,13 +2,16 @@
 
 ## To start
 
+- yarn
 - yarn fake-api
 - yarn start
 - yarn test
 - yarn cypress:open
 
-## yarn start
+or
 
-## yarn test
-
-## yarn cypress:open
+- npm install
+- npm run fake-api
+- npm run start
+- npm run test
+- npm run cypress:open
