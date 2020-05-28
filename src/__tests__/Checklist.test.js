@@ -27,4 +27,15 @@ describe("<Checklist />", () => {
     screen.getByLabelText(/Phenol/i);
     screen.getByLabelText(/PGI/i);
   });
+
+  it("Should have empty text if empty", () => {
+    const { rerender } = render(
+      <Checklist data={[]} onChange={() => {}} emptyText="Im empty" />
+    );
+    expect(screen.getByText(/im empty/i)).toBeInTheDocument();
+    rerender(
+      <Checklist data={dummyData} onChange={() => {}} emptyText="Im empty" />
+    );
+    expect(screen.queryByText(/im empty/i)).not.toBeInTheDocument();
+  });
 });
