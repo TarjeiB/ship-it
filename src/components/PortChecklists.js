@@ -34,7 +34,7 @@ export const PortChecklists = ({ loadCargo, dischCargo, handleNext }) => {
   );
 };
 
-const Checklist = ({ data, onChange, emptyText }) => (
+export const Checklist = ({ data, onChange, emptyText }) => (
   <>
     {data.length === 0 ? (
       <p>{emptyText}</p>
@@ -42,6 +42,7 @@ const Checklist = ({ data, onChange, emptyText }) => (
       <FormGroup>
         {data.map((item) => (
           <FormControlLabel
+            key={item.id}
             control={<Checkbox onChange={onChange} />}
             label={item.commodity}
           />
